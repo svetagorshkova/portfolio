@@ -124,3 +124,11 @@ main>.shot+.cs{margin-top:8px}
 
 /* text spans the full width of the images */
 .dek,.nda,.cs p,.cs ul,.cs ol,.alt-list,.quote-block,.cs h2{max-width:none}
+
+/* hero as a rounded card with the nav "notch" hanging from its top edge (like the homepage) */
+body.case{padding:16px 16px 0}
+.nav{top:16px}
+.chero{background:#161616;border-radius:24px;padding:132px 0 48px}
+.chero .wrapc{max-width:1120px}
+@media(min-width:900px){.chero{padding-top:156px}}
+.shot{margin-top:40px}
