@@ -132,3 +132,8 @@ body.case{padding:16px 16px 0}
 .chero .wrapc{max-width:1120px}
 @media(min-width:900px){.chero{padding-top:156px}}
 .shot{margin-top:40px}
+
+/* шапка кейса: градиент от светлее к фону страницы */
+.chero{
+  background:linear-gradient(to bottom,#1c1c1c 0%,#141414 45%,#000 100%);
+}
