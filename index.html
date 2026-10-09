@@ -3,127 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Светлана Горшкова — Lead Product Design</title>
-<meta name="description" content="Lead Product Design. Строю дизайн-системы для&nbsp;мультипродуктовых экосистем, веду продукты от&nbsp;идеи до&nbsp;продакшена.">
-<link rel="stylesheet" href="styles.css">
+<title>Светлана Горшкова — Product Design Lead</title>
+<meta name="description" content="Product Design Lead. Строю дизайн-системы для&nbsp;мультипродуктовых экосистем, веду продукты от&nbsp;идеи до&nbsp;продакшена.">
+<link rel="stylesheet" href="home.css">
 </head>
 <body>
 
-<nav class="topnav">
-  <div class="wrap">
-    <a href="index.html" class="brand">
-      <svg class="mark" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="url(#g1)" stroke-width="1.4"/><defs><linearGradient id="g1" x1="0" y1="0" x2="24" y2="24"><stop offset="0%" stop-color="#F2B84B"/><stop offset="55%" stop-color="#2FD3B8"/><stop offset="100%" stop-color="#7FA6E8"/></linearGradient></defs></svg>
-      Светлана Горшкова
-    </a>
-    <div class="links">
+<section class="hero">
+  <div class="hero-box">
+    <div class="hero-bg"></div>
+    <!-- ВИДЕО: положите файл в assets/hero.mp4 — он подставится автоматически -->
+    <video autoplay loop muted playsinline poster="assets/hero-poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video>
+    <div class="noise"></div>
+    <div class="shade"></div>
+
+    <nav class="nav">
+      <a href="#about">Обо мне</a>
       <a href="#cases">Кейсы</a>
-      <a href="#about">Опыт</a>
+      <a href="#experience">Опыт</a>
       <a href="#contact">Контакты</a>
-    </div>
-  </div>
-</nav>
+    </nav>
 
-<header class="hero">
-  <div class="hero-glow"></div>
-  <div class="wrap">
-    <h1 data-enter data-delay="0">Решаю задачи красиво и&nbsp;эффективно, превращая качественный пользовательский опыт в&nbsp;инструмент достижения бизнес-результатов</h1>
-    <p class="role" data-enter data-delay="120">10+ лет в&nbsp;дизайне, 4 года в&nbsp;Product Design, 20 лет на&nbsp;стыке продукта, бизнеса, маркетинга и&nbsp;дизайна.</p>
-    <p class="role" data-enter data-delay="170">Работаю с&nbsp;продуктами 0→1, сложными B2B/B2C-интерфейсами и&nbsp;масштабируемыми дизайн-системами. Запустила 6&nbsp;цифровых продуктов и&nbsp;развиваю дизайн-систему для 30+ продуктов и&nbsp;9&nbsp;продуктовых команд.</p>
-
-    <div class="stat-card" data-enter data-delay="260">
-      <div class="stat-row">
-        <div class="stat"><div class="num">+28%</div><div class="label">рост NPS за&nbsp;2&nbsp;года в&nbsp;текущей компании</div></div>
-        <div class="stat"><div class="num">30+</div><div class="label">продуктов в&nbsp;дизайн-системе</div></div>
-        <div class="stat"><div class="num">6</div><div class="label">продуктов запущено за&nbsp;4&nbsp;года</div></div>
+    <div class="hero-content">
+      <div class="hero-top">
+        <p class="hero-desc fade-up" style="--d:.5s">Светлана Горшкова — Product Design Lead.</p>
+        <a class="btn fade-up" style="--d:.7s" href="#cases">Смотреть кейсы <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></i></a>
       </div>
+      <h1 class="giant"><span class="w">ПОРТФОЛИО</span><sup>*</sup></h1>
     </div>
   </div>
-</header>
+</section>
 
-<main class="wrap">
-  <section id="cases" class="case-list">
-    <div class="section-label" data-enter data-delay="320">Избранные проекты</div>
-
-    <a href="case-nedra-design-system.html" class="case-row navy" data-enter data-delay="360">
-      <span class="meta">
-        <div class="ctitle">Архитектура дизайн-системы Nedra</div>
-        <div class="csub">Экосистема из&nbsp;30+&nbsp;продуктов ИТ-решений для&nbsp;нефтегаза</div>
-      </span>
-      <span class="tag">B2B · B2E · SaaS</span>
-      <span class="cresult"><strong>+28%</strong> NPS за&nbsp;2&nbsp;года</span>
-    </a>
-  
-    <a href="case-russpass.html" class="case-row amber" data-enter data-delay="410">
-      <span class="meta">
-        <div class="ctitle">RUSSPASS — UX-редизайн раздела туристических маршрутов</div>
-        <div class="csub">Перепроектирование discovery маршрутов: информационная архитектура, геймификация, AI-голосовой гид и&nbsp;механики повторного взаимодействия</div>
-      </span>
-      <span class="tag">B2C</span>
-      <span class="cresult">UX, Product Design</span>
-    </a>
-
-    <a href="case-mosvodokanal.html" class="case-row teal" data-enter data-delay="460">
-      <span class="meta">
-        <div class="ctitle">Цифровые двойники городских систем</div>
-        <div class="csub">B2B-платформа для предиктивного мониторинга и&nbsp;раннего выявления аварий</div>
-      </span>
-      <span class="tag">B2B</span>
-      <span class="cresult">Product Design</span>
-    </a>
-
-    <a href="case-chesnok.html" class="case-row brick" data-enter data-delay="510">
-      <span class="meta">
-        <div class="ctitle">Приложение для&nbsp;учёта совместных трат</div>
-        <div class="csub">0→1 pet-product: исследование проблемы, UX-концепция, прототипирование и&nbsp;разработка MVP</div>
-      </span>
-      <span class="tag">B2C</span>
-      <span class="cresult">Готовится к&nbsp;публикации</span>
-    </a>
+<div class="about-wrap" id="about">
+  <section class="about">
+    <div class="label">Обо мне</div>
+    <h2 data-pull>Решаю задачи <span class="serif">красиво и&nbsp;эффективно,</span> превращая качественный пользовательский опыт в&nbsp;инструмент достижения бизнес-результатов</h2>
+    <p class="reveal">10+&nbsp;лет в&nbsp;дизайне, 4&nbsp;года в&nbsp;Product Design, 20&nbsp;лет на&nbsp;стыке продукта, бизнеса, маркетинга и&nbsp;дизайна. Работаю с&nbsp;продуктами 0→1, сложными B2B/B2C-интерфейсами и&nbsp;масштабируемыми дизайн-системами. Запустила 6&nbsp;цифровых продуктов и&nbsp;развиваю дизайн-систему для&nbsp;30+&nbsp;продуктов и&nbsp;9&nbsp;продуктовых команд.</p>
+    <div class="facts">
+      <div class="fact"><b>+28%</b><span>рост NPS за&nbsp;2&nbsp;года в&nbsp;текущей компании</span></div>
+      <div class="fact"><b>30+</b><span>продуктов в&nbsp;дизайн-системе</span></div>
+      <div class="fact"><b>6</b><span>продуктов запущено за&nbsp;4&nbsp;года</span></div>
+    </div>
   </section>
+</div>
 
-  <section id="about" class="about">
-    <div class="section-label" data-enter data-delay="560">Опыт</div>
-    <p style="max-width:640px; font-size:15.5px; font-weight:500; color:var(--heading); letter-spacing:0.01em;" data-enter data-delay="590">Специализации: Growth Product · Infrastructure · 0-to-1 · Founding Design</p>
-    <p data-enter data-delay="620">Помимо дизайна веду продукт с&nbsp;бизнес-стороны: владела P&amp;L продуктовой линии в&nbsp;МТС (~10% выручки компании), строю дизайн-систему как&nbsp;масштабируемую бизнес-инициативу, а&nbsp;не&nbsp;только визуальный артефакт, и&nbsp;отстаиваю решения перед&nbsp;CTO и&nbsp;CMO вопреки организационному скепсису.</p>
-
-    <div class="skills-grid">
-      <div data-enter data-delay="660">
-        <h4>Дизайн-системы</h4>
-        <p>Архитектура токенов, компонентная модель, governance, масштабирование на&nbsp;9&nbsp;продуктовых команд</p>
+<section class="features" id="cases">
+  <h2 class="f-head" data-pull>Избранные проекты.<br><span class="l2">От&nbsp;B2C-приложений до&nbsp;экосистемы из&nbsp;30+&nbsp;продуктов.</span></h2>
+  <div class="cards">
+    <a class="card" style="--i:0" href="case-nedra-design-system.html">
+      <h3>Архитектура дизайн-системы Nedra</h3>
+      <div class="kind">B2B · B2E · SaaS</div>
+      <p class="desc">Экосистема из&nbsp;30+&nbsp;продуктов ИТ-решений для&nbsp;нефтегаза</p>
+      <div class="res"><b>+28%</b> NPS за&nbsp;2&nbsp;года</div>
+      <span class="more">Подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+    </a>
+    <a class="card photo" style="--i:1;background-image:url(assets/russpass-hero.webp)" href="case-russpass.html">
+      <div class="noise"></div>
+      <div class="inner">
+        <div class="kind" style="color:rgba(225,224,204,.6)">B2C</div>
+        <h3>RUSSPASS — UX-редизайн раздела туристических маршрутов</h3>
+        <p class="desc" style="margin-top:8px">Перепроектирование discovery маршрутов: информационная архитектура, геймификация, AI-голосовой гид и&nbsp;механики повторного взаимодействия</p>
+        <div class="res">UX, Product Design</div>
+        <span class="more">Подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
       </div>
-      <div data-enter data-delay="690">
-        <h4>Продуктовый дизайн</h4>
-        <p>Полный цикл создания продукта с&nbsp;нуля до&nbsp;запуска. B2B, B2C, веб и&nbsp;мобильные (iOS и&nbsp;Android) продукты</p>
-      </div>
-      <div data-enter data-delay="720">
-        <h4>Руководство дизайном</h4>
-        <p>Управление и&nbsp;развитие дизайнеров: найм, 1:1, менторинг, performance review, планирование ресурсов и&nbsp;дизайн-процессы</p>
-      </div>
-      <div data-enter data-delay="750">
-        <h4>Продукт и бизнес</h4>
-        <p>Работа с&nbsp;продуктовыми метриками, пользовательской аналитикой и&nbsp;бизнес-контекстом</p>
-      </div>
-      <div data-enter data-delay="780">
-        <h4>ИИ в рабочем процессе</h4>
-        <p>Прототипирование, вайбкодинг, генерация визуального контента. GPT, Claude, Cursor и&nbsp;другие AI-инструменты</p>
-      </div>
-      <div data-enter data-delay="810">
-        <h4>Технический стек</h4>
-        <p>Figma Variables, Figma Prototype, JSON-синхронизация с&nbsp;кодом, основы HTML/CSS/React, Figma MCP</p>
-      </div>
-    </div>
-
-    <p style="margin-top:28px; font-size:14px; color:var(--faint);" data-enter data-delay="850">Постоянно учусь: курсы по&nbsp;дизайн-системам и&nbsp;лидерству (WANNABE), анимация интерфейсов (Motion Design School), формальное образование Creative Design (Брюссель).</p>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; width:100%;">
-    <span>Москва &middot; удалённо и&nbsp;гибрид</span>
-    <span><a href="mailto:svetlana.a.gorshkova@gmail.com">svetlana.a.gorshkova@gmail.com</a> &middot; <a href="https://dribbble.com/hagedis">Dribbble</a></span>
+    </a>
+    <a class="card" style="--i:2" href="case-mosvodokanal.html">
+      <h3>Цифровые двойники городских систем</h3>
+      <div class="kind">B2B</div>
+      <p class="desc">B2B-платформа для&nbsp;предиктивного мониторинга и&nbsp;раннего выявления аварий</p>
+      <div class="res">Product Design</div>
+      <span class="more">Подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+    </a>
+    <a class="card" style="--i:3" href="case-chesnok.html">
+      <h3>Приложение для&nbsp;учёта совместных трат</h3>
+      <div class="kind">B2C</div>
+      <p class="desc">0→1 pet-product: исследование проблемы, UX-концепция, прототипирование и&nbsp;разработка MVP</p>
+      <div class="res">Готовится к&nbsp;публикации</div>
+      <span class="more">Подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+    </a>
   </div>
+</section>
+
+<div class="glow-zone">
+<div class="about-wrap exp-wrap" id="experience">
+<section class="exp about">
+  <div class="label">Опыт</div>
+  <div class="chips fade-up"><span>Growth Product</span><span>Infrastructure</span><span>0-to-1</span><span>Founding Design</span></div>
+  <p class="reveal lead">Помимо дизайна веду продукт с&nbsp;бизнес-стороны: владела P&amp;L продуктовой линии в&nbsp;МТС (~10% выручки компании), строю дизайн-систему как&nbsp;масштабируемую бизнес-инициативу, а&nbsp;не&nbsp;только визуальный артефакт.</p>
+  <div class="xgrid">
+      <div class="xcard" style="--i:0"><div class="xi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><h3><span>Дизайн-системы</span></h3><p>Архитектура токенов, компонентная модель, governance, масштабирование на&nbsp;9&nbsp;продуктовых команд</p></div>
+      <div class="xcard" style="--i:0"><div class="xi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg></div><h3><span>Продуктовый дизайн</span></h3><p>Полный цикл создания продукта с&nbsp;нуля до&nbsp;запуска. B2B, B2C, веб и&nbsp;мобильные (iOS и&nbsp;Android) продукты</p></div>
+      <div class="xcard" style="--i:0"><div class="xi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.5" cy="9" r="2.4"/><path d="M17 14.2c2.4.2 4 2 4 4.8"/></svg></div><h3><span>Руководство дизайном</span></h3><p>Управление и&nbsp;развитие дизайнеров: найм, 1:1, менторинг, performance review, планирование ресурсов и&nbsp;дизайн-процессы</p></div>
+      <div class="xcard" style="--i:0"><div class="xi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3><span>Продукт и&nbsp;бизнес</span></h3><p>Работа с&nbsp;продуктовыми метриками, пользовательской аналитикой и&nbsp;бизнес-контекстом</p></div>
+      <div class="xcard" style="--i:0"><div class="xi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="M19 17l.7 1.8L21.5 19.5l-1.8.7L19 22l-.7-1.8-1.8-.7 1.8-.7L19 17Z"/></svg></div><h3><span>ИИ в&nbsp;рабочем процессе</span></h3><p>Прототипирование, вайбкодинг, генерация визуального контента. GPT, Claude, Cursor и&nbsp;другие AI-инструменты</p></div>
+      <div class="xcard" style="--i:0"><div class="xi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></svg></div><h3><span>Технический стек</span></h3><p>Figma Variables, Figma Prototype, JSON-синхронизация с&nbsp;кодом, основы HTML/CSS/React, Figma MCP</p></div>
+  </div>
+  <p class="learn fade-up">Постоянно учусь: курсы по&nbsp;дизайн-системам и&nbsp;лидерству (WANNABE), анимация интерфейсов (Motion Design School), формальное образование Creative Design (Брюссель).</p>
+</section>
+</div>
+
+<footer id="contact">
+  <div>Москва · удалённо и&nbsp;гибрид</div>
+  <a class="mail" href="mailto:svetlana.a.gorshkova@gmail.com">svetlana.a.gorshkova@gmail.com</a>
+  <a href="https://dribbble.com/hagedis">Dribbble</a>
 </footer>
+</div>
 
-<script src="entrance.js"></script>
+<script src="home.js"></script>
 </body>
 </html>
