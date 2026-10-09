@@ -121,3 +121,6 @@ main>.shot+.cs{margin-top:8px}
 .next{border-top:0;margin-top:56px}
 
 @media(min-width:640px){.result-grid{grid-template-columns:repeat(var(--n,4),1fr)}}
+
+/* text spans the full width of the images */
+.dek,.nda,.cs p,.cs ul,.cs ol,.alt-list,.quote-block,.cs h2{max-width:none}
