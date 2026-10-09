@@ -5,62 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Чеснок — деление расходов — Светлана Горшкова</title>
 <meta name="description" content="Личный проект: приложение для&nbsp;деления расходов на&nbsp;покупках без&nbsp;привязки к&nbsp;банкам и&nbsp;маркетплейсам.">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="case.css">
 </head>
-<body>
+<body class="case">
 
-<nav class="topnav">
-  <div class="wrap">
-    <a href="index.html" class="brand">
-      <svg class="mark" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="url(#g1)" stroke-width="1.4"/><defs><linearGradient id="g1" x1="0" y1="0" x2="24" y2="24"><stop offset="0%" stop-color="#F2B84B"/><stop offset="55%" stop-color="#2FD3B8"/><stop offset="100%" stop-color="#7FA6E8"/></linearGradient></defs></svg>
-      Светлана Горшкова
-    </a>
-    <div class="links">
-      <a href="index.html#cases">Кейсы</a>
-      <a href="index.html#about">Опыт</a>
-      <a href="index.html#contact">Контакты</a>
-    </div>
-  </div>
+<nav class="nav">
+  <a href="index.html">Главная</a>
+  <a href="index.html#cases">Кейсы</a>
+  <a href="index.html#experience">Опыт</a>
+  <a href="index.html#contact">Контакты</a>
 </nav>
 
-<div class="narrow">
-  <header class="case-hero">
-    <a href="index.html" class="back">← Все кейсы</a>
-    <span class="eyebrow-badge brick" data-enter data-delay="0">B2C · Mobile</span>
-    <h1 data-enter data-delay="80">Чеснок — деление расходов</h1>
-    <p class="dek" data-enter data-delay="160">Придумала, спроектировала и&nbsp;веду с&nbsp;нуля. Приложение для&nbsp;совместных покупок и&nbsp;трат — без&nbsp;привязки к&nbsp;конкретному банку или маркетплейсу.</p>
-
-    <div class="facts-row" data-enter data-delay="240">
+<header class="chero">
+  <div class="wrapc">
+    <a href="index.html#cases" class="back fade-up">← Все кейсы</a>
+    <span class="chip brick fade-up">B2C · Mobile</span>
+    <h1 data-pull>Чеснок — деление расходов</h1>
+    <p class="dek fade-up" style="--d:.3s">Придумала, спроектировала и&nbsp;веду с&nbsp;нуля. Приложение для&nbsp;совместных покупок и&nbsp;трат — без&nbsp;привязки к&nbsp;конкретному банку или маркетплейсу.</p>
+    <div class="facts fade-up" style="--d:.4s;--n:4">
       <div class="fact"><div class="k">Роль</div><div class="v">Product Designer, соло</div></div>
       <div class="fact"><div class="k">Формат</div><div class="v">2026 год, pet-проект</div></div>
       <div class="fact"><div class="k">Статус</div><div class="v">Дизайн готов, готовится к&nbsp;публикации</div></div>
       <div class="fact"><div class="k">Название</div><div class="v">Рабочее, финал обсуждается</div></div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <img src="assets/chk_(3).webp" alt="..." style="border-radius:8px; margin:24px 0; width:100%; cursor:zoom-in;" onclick="document.getElementById('lightbox-img').src=this.src; document.getElementById('lightbox').style.display='flex';">
+<main class="wrapc">
+  <figure class="shot"><img src="assets/chk_(3).webp" alt="" loading="lazy"></figure>
 
-  <div class="case-body">
+<section class="cs"><h2>Проблема</h2>
+      <p>Увидела нишу, не&nbsp;закрытую существующими решениями: все приложения для&nbsp;деления расходов на&nbsp;рынке привязаны к&nbsp;банкам или маркетплейсам конкретной экосистемы — нет нейтрального, независимого решения, которым можно пользоваться вне зависимости от&nbsp;того, в&nbsp;каком банке у&nbsp;кого счёт.</p></section>
 
-    <section>
-      <h2>Проблема</h2>
-      <p>Увидела нишу, не&nbsp;закрытую существующими решениями: все приложения для&nbsp;деления расходов на&nbsp;рынке привязаны к&nbsp;банкам или маркетплейсам конкретной экосистемы — нет нейтрального, независимого решения, которым можно пользоваться вне зависимости от&nbsp;того, в&nbsp;каком банке у&nbsp;кого счёт.</p>
-    </section>
+<section class="cs"><h2>JTBD</h2>
+      <blockquote class="quote-block">Когда я&nbsp;собираюсь в&nbsp;поездку или делаю совместную покупку с&nbsp;друзьями, я&nbsp;хочу быстро зафиксировать, кто сколько должен, и&nbsp;мягко напомнить тем, кто ещё не&nbsp;оплатил, чтобы не&nbsp;считать вручную и&nbsp;не&nbsp;требовать деньги у&nbsp;знакомых неловко.</blockquote></section>
 
-    <section>
-      <h2>JTBD</h2>
-      <blockquote class="quote-block">Когда я&nbsp;собираюсь в&nbsp;поездку или делаю совместную покупку с&nbsp;друзьями, я&nbsp;хочу быстро зафиксировать, кто сколько должен, и&nbsp;мягко напомнить тем, кто ещё не&nbsp;оплатил, чтобы не&nbsp;считать вручную и&nbsp;не&nbsp;требовать деньги у&nbsp;знакомых неловко.</blockquote>
-    </section>
-
-    <section>
-      <h2>Ключевая идея</h2>
+<section class="cs"><h2>Ключевая идея</h2>
       <p>Помимо разделения расходов, важной частью продукта стали <strong>вежливые напоминания о&nbsp;долгах</strong> — то, что превращает приложение из&nbsp;калькулятора в&nbsp;инструмент, который помогает поддерживать нормальные отношения между людьми, а&nbsp;не&nbsp;создавать неловкость из-за&nbsp;денег.</p>
-    </section>
+    
+<figure class="shot"><img src="assets/chk_(1).webp" alt="" loading="lazy"></figure></section>
 
-    <img src="assets/chk_(1).webp" alt="..." style="border-radius:8px; margin:24px 0; width:100%; cursor:zoom-in;" onclick="document.getElementById('lightbox-img').src=this.src; document.getElementById('lightbox').style.display='flex';">
-
-    <section>
-      <h2>Что рассматривала и&nbsp;отбросила</h2>
+<section class="cs"><h2>Что рассматривала и&nbsp;отбросила</h2>
       <ul class="alt-list">
         <li>
           <span class="alt-mark yes">✓</span>
@@ -77,23 +63,19 @@
           </span>
         </li>
       </ul>
-    </section>
+    
+<figure class="shot"><img src="assets/chk_(2).webp" alt="" loading="lazy"></figure></section>
 
-    <img src="assets/chk_(2).webp" alt="..." style="border-radius:8px; margin:24px 0; width:100%; cursor:zoom-in;" onclick="document.getElementById('lightbox-img').src=this.src; document.getElementById('lightbox').style.display='flex';">
-
-    <section>
-      <h2>Решение</h2>
+<section class="cs"><h2>Решение</h2>
       <ul>
         <li>Независимость от&nbsp;банков и&nbsp;маркетплейсов — работает как&nbsp;самостоятельный инструмент для&nbsp;любой группы людей</li>
         <li>Гибкое деление: поровну или индивидуальная сумма для&nbsp;каждого участника</li>
         <li>Карточки расходов с&nbsp;прогресс-барами по&nbsp;каждому долгу</li>
         <li>Вежливые напоминания вместо жёстких требований — автоматически по&nbsp;сроку или вручную по&nbsp;кнопке</li>
         <li>Приложение чека к&nbsp;расходу</li>
-      </ul>
-    </section>
+      </ul></section>
 
-    <section>
-      <h2>Пользовательский флоу</h2>
+<section class="cs"><h2>Пользовательский флоу</h2>
       <ol>
         <li>Создаёт группу/событие, добавляет участников</li>
         <li>Добавляет расход: название, сумма, фото чека</li>
@@ -101,32 +83,27 @@
         <li>Приложение фиксирует доли участников</li>
         <li>Должнику приходит напоминание — автоматически или вручную</li>
         <li>Должник отмечает оплату, долг закрыт</li>
-      </ol>
-    </section>
+      </ol></section>
 
-    <section>
-      <h2>Статус</h2>
-      <p>Дизайн полностью готов, сейчас на&nbsp;этапе подготовки к&nbsp;публикации совместно с&nbsp;командой разработчиков. Финальное название пока обсуждается.</p>
-    </section>
+<section class="cs"><h2>Статус</h2>
+      <p>Дизайн полностью готов, сейчас на&nbsp;этапе подготовки к&nbsp;публикации совместно с&nbsp;командой разработчиков. Финальное название пока обсуждается.</p></section>
+</main>
 
-  </div>
-
-  <div class="next-case">
+<section class="next">
+  <div class="wrapc">
     <div class="k">Следующий кейс</div>
-    <a href="case-nedra-design-system.html">Архитектура дизайн-системы Nedra</a>
+    <a href="case-nedra-design-system.html" class="nlink"><span>Архитектура дизайн-системы Nedra</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
   </div>
-</div>
+</section>
 
-<footer>
-  <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; width:100%;">
-    <span>Москва &middot; удалённо и&nbsp;гибрид</span>
-    <span><a href="mailto:svetlana.a.gorshkova@gmail.com">svetlana.a.gorshkova@gmail.com</a> &middot; <a href="https://dribbble.com/hagedis">Dribbble</a></span>
-  </div>
+<footer id="contact">
+  <div>Москва · удалённо и&nbsp;гибрид</div>
+  <a class="mail" href="mailto:svetlana.a.gorshkova@gmail.com">svetlana.a.gorshkova@gmail.com</a>
+  <a href="https://dribbble.com/hagedis">Dribbble</a>
 </footer>
 
-<script src="entrance.js"></script>
-<div id="lightbox" onclick="this.style.display='none'" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:999; align-items:center; justify-content:center; padding:20px; cursor:zoom-out;">
-  <img id="lightbox-img" src="" style="max-width:100%; max-height:100%; border-radius:8px;">
-</div>
+<div id="lightbox"><img id="lightbox-img" src="" alt=""></div>
+<script src="home.js"></script>
+<script src="case.js"></script>
 </body>
 </html>
