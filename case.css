@@ -24,7 +24,7 @@ body.case{background:#000;counter-reset:sec}
 
 /* images */
 .shot{margin:40px 0;max-width:1120px}
-.shot img{display:block;width:100%;height:auto;border-radius:12px;cursor:zoom-in;background:#101010}
+.shot img{display:block;width:100%;height:auto;border-radius:12px;cursor:zoom-in;background:transparent}
 .shot img.missing{min-height:260px;border:1px dashed rgba(225,224,204,.2);border-radius:12px;object-fit:none;font-size:13px;color:#6b7280}
 main>.shot:first-child{margin-top:8px}
 
@@ -132,8 +132,4 @@ body.case{padding:16px 16px 0}
 .chero .wrapc{max-width:1120px}
 @media(min-width:900px){.chero{padding-top:156px}}
 .shot{margin-top:40px}
-
-/* шапка кейса: градиент от светлее к фону страницы */
-.chero{
-  background:linear-gradient(to bottom,#1c1c1c 0%,#141414 45%,#000 100%);
-}
+.shot.flow img{border-radius:clamp(10px,2.2vw,24px);background:#fff}

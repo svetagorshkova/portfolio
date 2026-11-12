@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Редизайн мобильного приложения для Федерации тенниса РТТ  — Светлана Горшкова</title>
+<meta name="description" content="UX/UI флоу подачи заявки на&nbsp;микст-турнир в&nbsp;РТТ: от&nbsp;11+&nbsp;шагов к&nbsp;6, понятные статусы и&nbsp;доступный интерфейс.">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="case.css">
+<link rel="stylesheet" href="mixt-proto.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;600;800;900&family=Roboto+Mono:wght@400;600&display=swap">
+<style>
+.chip.lime{border-color:rgba(200,245,26,.65)}
+.cmp{display:grid;gap:16px;margin:28px 0 8px}
+@media(min-width:900px){.cmp{grid-template-columns:1fr 1fr}}
+.cmp .col{background:#101010;border:1px solid var(--hair);border-radius:12px;padding:24px 24px 8px}
+.cmp .big{font-weight:500;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-.04em;color:var(--text);margin-bottom:6px}
+.cmp .big small{font-size:.35em;letter-spacing:0;color:#8a8a80;font-weight:400;margin-left:8px}
+.cmp .tag{font-size:12px;color:#8a8a80;margin-bottom:18px}
+.cmp ol{margin-bottom:14px}
+.cmp ol>li{font-size:15px;padding-top:9px;padding-bottom:9px}
+.cmp ol>li::before{top:9px}
+.cmp .new ol>li::before,.cmp .col.new .big{color:#C8F51A;border-color:rgba(200,245,26,.55)}
+.cmp .col.new{border-color:rgba(200,245,26,.35)}
+.cmp .col.new .big{color:#C8F51A}
+.pain{max-width:none}
+.phones{display:grid;gap:16px;grid-template-columns:repeat(3,1fr);margin:32px 0 36px}
+.phones img{display:block;width:100%;height:auto;border-radius:12px;cursor:zoom-in;background:#07080A}
+@media(max-width:639px){.phones{grid-template-columns:1fr;max-width:420px}}
+.phones figcaption,.cap{font-size:13px;line-height:1.45;color:#8a8a80;margin-top:10px}
+.tbl{width:100%;border-collapse:collapse;margin:8px 0 22px;font-size:15px}
+.tbl th,.tbl td{text-align:left;padding:12px 16px 12px 0;border-bottom:1px solid var(--hair);vertical-align:top;color:var(--muted);line-height:1.45}
+.tbl th{font-weight:500;font-size:12px;color:#8a8a80}
+.tbl td:first-child{color:var(--text);font-weight:500;white-space:nowrap}
+.tbl-wrap{overflow-x:auto}
+footer .mail{font-size:clamp(13px,4.6vw,22px);white-space:nowrap;padding:0 8px}
+@media(max-width:639px){.tbl,.tbl tbody,.tbl tr,.tbl td{display:block;width:100%}.tbl tr:first-child{display:none}.tbl tr{padding:14px 0;border-bottom:1px solid var(--hair)}.tbl td{padding:0;border:0}.tbl td:first-child{white-space:normal;margin-bottom:6px}.tbl td+td{font-size:14px}}
+.swatches{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 24px}
+.sw{display:flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border:1px solid var(--hair);border-radius:999px;font-size:13px;color:var(--muted)}
+.sw i{width:24px;height:24px;border-radius:50%;border:1px solid rgba(255,255,255,.15)}
+.cs h2 .soft{color:#8a8a80}
+</style>
+</head>
+<body class="case">
+
+<nav class="nav">
+  <a href="index.html">Главная</a>
+  <a href="index.html#cases">Кейсы</a>
+  <a href="index.html#experience">Опыт</a>
+  <a href="index.html#contact">Контакты</a>
+</nav>
+
+<header class="chero">
+  <div class="wrapc">
+    <a href="index.html#cases" class="back fade-up">← Все кейсы</a>
+    <span class="chip lime fade-up">B2C · Sport · Web / Mobile</span>
+    <h1 data-pull>Редизайн мобильного приложения для Федерации тенниса РТТ</h1>
+    <p class="dek fade-up" style="--d:.3s">Работа над флоу подачи заявки на&nbsp;микст-турнир РТТ: сократила путь игрока с&nbsp;11+&nbsp;шагов до&nbsp;6, добавила понятные статусы и&nbsp;собрала интерфейс, который проходит WCAG&nbsp;2.1&nbsp;AA.</p>
+    <div class="facts fade-up" style="--d:.4s;--n:4">
+      <div class="fact"><div class="k">Роль</div><div class="v">Product Designer</div></div>
+      <div class="fact"><div class="k">Платформа</div><div class="v">Mobile First</div></div>
+      <div class="fact"><div class="k">Флоу</div><div class="v">c 11+ до 6 шагов</div></div>
+      <div class="fact"><div class="k">Доступность</div><div class="v">WCAG 2.1 AA</div></div>
+    </div>
+    <p class="nda">Переработка сценария сайта rtt.mytennis.online. Данные игроков на&nbsp;экранах — вымышленные.</p>
+  </div>
+</header>
+
+<main class="wrapc">
+
+<section class="cs"><h2>Контекст</h2>
+  <p>Чтобы сыграть микст (парный разряд), игроку нужно подать заявку вместе с&nbsp;партнёром. В&nbsp;РТТ это делается через приглашение: один игрок выбирает партнёра, тот должен принять приглашение, и&nbsp;только после этого пара попадает в&nbsp;турнир.</p>
+  <p>Действует регламент: не&nbsp;более двух турниров парного разряда на&nbsp;неделе, приоритет участия 1 или 2, список после определённого срока «замораживается». Любая лишняя неопределённость в&nbsp;процессе — это стресс для родителей и игроков и негативное отношение к организаторам.</p></section>
+
+<figure class="shot flow"><img src="assets/mixt-hero.webp" alt="Экран выбора партнёра для микста на смартфоне, лежащем на грунтовом корте рядом с ракеткой и мячами" loading="lazy"></figure>
+
+<section class="cs"><h2>Цели</h2>
+  <ul>
+    <li><strong>Для приглашающего игрока:</strong> подать заявку на&nbsp;микст быстро и&nbsp;без ошибок, всегда понимая, что происходит с&nbsp;приглашением.</li>
+    <li><strong>Для игрока, принимающего приглашение:</strong> сразу заметить приглашение и&nbsp;ответить на&nbsp;него в&nbsp;один клик.</li>
+    <li><strong>Для организатора:</strong> меньше звонков от игроков с просьбой «помочь найти пару», больше прозрачности и упрощение процесса организации турниров.</li>
+  </ul></section>
+
+<section class="cs"><h2>Задачи</h2>
+  <ul>
+    <li>Разобрать текущий путь и&nbsp;найти шаги, которые можно отпимизировать</li>
+    <li>Показать явно статус приглашения: отправлено, просмотрено, принято, отклонено, истекло</li>
+    <li>Помочь выбрать партнёра: собрать в одном месте очки в&nbsp;парном разряде, статусы «Ищет пару / Пока без пары / Уже в&nbsp;паре»</li>
+    <li>Встроить правила регламента в&nbsp;интерфейс так, чтобы не&nbsp;перегрузить экран</li>
+  </ul></section>
+
+<section class="cs"><h2>Проблема: 11&nbsp;шагов и&nbsp;отсутствие реакции после отправки</h2>
+  <p>Игрок проходит через страницы турниров для&nbsp;юношей, для&nbsp;девушек, страницы одиночных и&nbsp;парных очков — и&nbsp;только потом получает возможность отправить приглашение. После этого он остаётся с&nbsp;единственной кнопкой «Отозвать».</p>
+  <figure class="shot flow"><img src="assets/mixt-flow-p.webp" alt="Текущий флоу заявки на микст в РТТ: 11 шагов от входа в раздел спортсмена до ожидания ответа партнёрши" loading="lazy"></figure>
+  <p><strong>Боли на&nbsp;последнем шаге:</strong></p>
+  <ul>
+    <li>Не&nbsp;известно, открыл ли партнёр приглашение</li>
+    <li>Многие просто игнорируют приглашение, если не&nbsp;хотят играть</li>
+    <li>Многие вообще не&nbsp;видят, что приглашение есть</li>
+  </ul>
+  <p class="note">Боли из&nbsp;открытых опросов игроков и&nbsp;их&nbsp;родителей.</p></section>
+
+<section class="cs"><h2>Что сделала</h2>
+  <p>Сначала собрала wireframe мобильной версии: список игроков турнира, парные очки каждого, статусы готовности и&nbsp;отдельное поле поиска для&nbsp;тех, кто ещё не&nbsp;подал заявку.</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>Что добавила</th><th>Зачем</th></tr>
+    <tr><td>Очки в&nbsp;парном разряде</td><td>Игроку важны парные очки партнёра</td></tr>
+    <tr><td>Статусы «Ищет пару», «Пока без пары», «Уже в&nbsp;паре»</td><td>Видно, к&nbsp;кому имеет смысл обращаться; занятых партнёров не&nbsp;прячем, а&nbsp;помечаем</td></tr>
+    <tr><td>Сохраняем поиск вне турнира</td><td>По правилам один из игроков пары может не играть в одиночной части турнира</td></tr>
+    <tr><td>Сохраняем приоритет участия</td><td>Регламент РТТ: приоритет 1 или 2 выбирается в&nbsp;момент отправки</td></tr>
+    <tr><td>Плашки с текстом из регламента</td><td>«Важно перед отправкой» и&nbsp;«Что будет после отправки» свёрнуты, чтобы не&nbsp;перегружать экран</td></tr>
+    <tr><td>Срок 12 часов</td><td>Сказано сразу, в&nbsp;подзаголовке: после истечения можно пригласить другого</td></tr>
+  </table></div></section>
+
+<figure class="shot flow"><img src="assets/mixt-flow-new-p.webp" alt="Новый флоу заявки на микст в РТТ: 6 шагов у игрока вместо 11 и статус заявки после отправки" loading="lazy"></figure>
+
+<figure class="shot"><img src="assets/mixt-bento-3.webp" alt="Элементы интерфейса приглашения на микст: список игроков, карточка турнира, очки пары и срок приглашения, рядом фото теннисного корта" loading="lazy"></figure>
+
+<section class="cs ix-sec"><h2>Интерактивный макет</h2>
+  <p class="ix-lead">Пролистайте экран, выберите партнёра и&nbsp;отправьте приглашение — откроется новый экран статуса. Справа можно сымитировать ответ партнёра. Данные игроков вымышленные.</p>
+  <div class="ix" id="proto">
+    <div class="ix-tabs" role="tablist" aria-label="Шаги сценария">
+      <button type="button" role="tab" class="ix-tab on" data-step="1" aria-selected="true"><i>Шаг 1</i><span>Выберите игрока из&nbsp;списка</span></button>
+      <button type="button" role="tab" class="ix-tab" data-step="2" aria-selected="false"><i>Шаг 2</i><span>Нажмите «Отправить приглашение»</span></button>
+      <button type="button" role="tab" class="ix-tab" data-step="3" aria-selected="false"><i>Шаг 3</i><span>Сымитируйте ответ партнёра</span></button>
+    </div>
+    <div class="ix-stage">
+      <div class="ix-bg on" style="background-image:url(assets/mixt-stage-1.webp)"></div>
+      <div class="ix-bg" style="background-image:url(assets/mixt-stage-2.webp)"></div>
+      <div class="ix-bg" style="background-image:url(assets/mixt-stage-3.webp)"></div>
+      <div class="ix-shade"></div>
+      <div class="stage"><div class="scaler"><div class="tilt">
+      <div class="phone"><span class="sb a"></span><span class="sb v1"></span><span class="sb v2"></span><span class="sb p"></span><div class="screen">
+        <div class="island"></div>
+        <div class="sbar" aria-hidden="true"><span class="tm">9:41</span><span class="ic">
+          <svg width="19" height="12" viewBox="0 0 19 12" fill="#fff"><rect y="7.5" width="3.2" height="4.5" rx="1"/><rect x="5.2" y="5" width="3.2" height="7" rx="1"/><rect x="10.4" y="2.5" width="3.2" height="9.5" rx="1"/><rect x="15.6" width="3.2" height="12" rx="1"/></svg>
+          <svg width="17" height="12" viewBox="0 0 17 12" fill="#fff"><path d="M8.5 2.4c2.3 0 4.4.9 6 2.4l1-1.1C13.6 1.9 11.2.9 8.5.9S3.4 1.9 1.5 3.7l1 1.1c1.6-1.5 3.7-2.4 6-2.4Z"/><path d="M8.5 5.8c1.4 0 2.7.5 3.7 1.4l1-1.1c-1.3-1.1-2.9-1.8-4.7-1.8s-3.4.7-4.7 1.8l1 1.1c1-.9 2.3-1.4 3.7-1.4Z"/><path d="M8.5 9.2c.7 0 1.3.3 1.8.7L8.5 12 6.7 9.9c.5-.4 1.1-.7 1.8-.7Z"/></svg>
+          <svg width="28" height="13" viewBox="0 0 28 13" fill="none"><rect x=".5" y=".5" width="24" height="12" rx="3.8" stroke="#fff" stroke-opacity=".4"/><rect x="2" y="2" width="21" height="9" rx="2.5" fill="#fff"/><path d="M26 4.5v4c.8-.3 1.5-1.2 1.5-2s-.7-1.7-1.5-2Z" fill="#fff" fill-opacity=".45"/></svg>
+        </span></div>
+        <div class="vp">
+
+        <div class="pane" id="s1" tabindex="-1"><div class="in">
+          <div class="top"><button class="bk" id="back-btn" type="button" aria-label="Назад">‹</button><b>Приглашение игрока</b><span class="mono">10001: Тестов Артём Игоревич</span></div>
+          <h4>Выберите партнёра для&nbsp;микста</h4>
+          <p class="sub mono">Партнёр получит уведомление и&nbsp;письмо. Приглашение действует 12&nbsp;часов, потом можно пригласить другого.</p>
+          <div class="glass">
+            <span class="lime-tag">Подача заявок</span>
+            <div class="tname">Осенний Кубок Северного округа на призы Tennisball</div>
+            <div class="trow mono"><span>Каменево</span><span>14 — 20 декабря, 2026</span></div>
+            <div class="chips mono"><span class="on">III A</span><span>Смешанный</span><span>до 15 лет</span><span>5 кортов</span></div>
+            <div class="nums"><div><small class="mono">Основной турнир</small><b>16</b></div><div><small class="mono">По рейтингу</small><b>13</b></div><div><small class="mono">СК</small><b>3</b></div></div>
+            <div class="prio"><span class="mono">Приоритет участия</span><button type="button" class="dd" id="prio-dd" aria-label="Приоритет участия: 1. Нажмите, чтобы сменить"><span id="prio-val">1</span><em>▾</em></button></div>
+          </div>
+          <div class="accard">
+          <button class="acc" type="button" aria-expanded="false" aria-controls="acc1"><i>!</i>Важно перед отправкой<em>▾</em></button>
+          <div class="accbody" id="acc1" hidden>
+            <div class="ai">Не более двух турниров парного разряда на неделе.</div>
+            <div class="ai">Приоритет 1 или 2 влияет на порядок допуска в турнир.</div>
+            <div class="ai">После закрытия приёма заявок список пар «замораживается».</div>
+          </div>
+          </div>
+          <div class="lh"><span>Уже заявились в турнир: 24</span><i class="flt" aria-hidden="true"></i></div>
+          <div id="pl-list" role="radiogroup" aria-label="Партнёр для микста"></div>
+          <div class="glass" style="margin-top:14px">
+            <div class="tname">Нужного партнёра нет в списке?</div>
+            <input class="srch" type="search" placeholder="Поиск игрока вне турнира" aria-label="Поиск игрока вне турнира">
+            <div class="hint mono">Если партнёр ещё не подал заявку, ничего страшного: заявка создастся, когда он примет приглашение.</div>
+          </div>
+          <div class="accard">
+          <button class="acc" type="button" aria-expanded="false" aria-controls="acc2"><i>!</i>Что будет после отправки<em>▾</em></button>
+          <div class="accbody" id="acc2" hidden>
+            <div class="ai">Партнёру придут уведомление и письмо со ссылкой.</div>
+            <div class="ai">Вы увидите статус: отправлено, просмотрено, принято или отклонено.</div>
+            <div class="ai">Через 12 часов приглашение истечёт — тогда можно пригласить другого.</div>
+          </div>
+          </div>
+        </div>
+        <div class="dock">
+          <div class="pp mono">Очки вашей пары <b id="pp-val">Выберите партнёра</b></div>
+          <button class="btn2 main" id="send" type="button" disabled>Отправить приглашение</button>
+          <button class="btn2 sec" id="cancel-btn" type="button">Вернуться</button>
+        </div></div>
+
+        <div class="pane off" id="s2" tabindex="-1"><div class="in">
+          <div class="top"><button class="bk" id="back2" type="button" aria-label="Назад" onclick="document.getElementById('back-btn').click()">‹</button><b>Статус приглашения</b><span class="mono">Осенний Кубок Северного округа</span></div>
+          <div class="ok-ring" id="st-ring" aria-hidden="true">✓</div>
+          <h4 id="st-title">Приглашение отправлено</h4>
+          <p class="sub mono" id="st-sub">Партнёру ушли уведомление и письмо со ссылкой.</p>
+          <div class="glass who"><div><b id="st-name">Лисицына Анна</b><small class="mono">Парный разряд</small></div><span class="pts" id="st-pts">984</span></div>
+          <div class="glass">
+            <div class="tl">
+              <div class="ti">Отправлено<small>Только что</small></div>
+              <div class="ti">Просмотрено<small>Партнёр открыл ссылку</small></div>
+              <div class="ti">Принято или отклонено<small>Один клик по ссылке</small></div>
+              <div class="ti">Срок 12 часов<small>Если ответа нет, приглашение истекает</small></div>
+            </div>
+            <div class="timer" id="st-timer">Осталось 12:00:00</div>
+          </div>
+          <p class="next-note mono" id="st-note"></p>
+        </div>
+        <div class="dock">
+          <button class="btn2 main" id="again" type="button" hidden>Пригласить другого</button>
+          <button class="btn2 sec" id="st-back" type="button" onclick="document.getElementById('reset').click()">К выбору партнёра</button>
+        </div></div>
+
+        </div>
+        <div class="homebar"></div>
+      </div></div>
+    </div></div></div>
+      <div class="ctrl ix-sim" id="ix-sim" aria-hidden="true">
+        <button type="button" data-st="seen">Партнёр открыл</button>
+        <button type="button" data-st="ok" class="lime">Партнёр принял</button>
+        <button type="button" data-st="no">Партнёр отклонил</button>
+        <button type="button" data-st="exp">Прошло 12 часов</button>
+        <button type="button" id="reset">Начать заново</button>
+      </div>
+    </div>
+    <div class="ix-foot">
+      <button type="button" class="ix-ar" id="ix-prev" aria-label="Предыдущий шаг"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+      <p class="ix-cap" id="ix-cap" aria-live="polite">Игроки «Уже в паре» недоступны для выбора</p>
+      <button type="button" class="ix-ar" id="ix-next" aria-label="Следующий шаг"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button>
+    </div>
+  </div></section>
+
+<section class="cs"><h2>Что сделала бы дальше</h2>
+  <p>Проверила бы на&nbsp;5–6 игроках, оценила бы, замечают ли партнёры приглашение в&nbsp;первые 6 часов, и&nbsp;сравнила бы долю принятых приглашений до&nbsp;и&nbsp;после. Отдельно проработала бы сценарий партнёра: экран «принять или отклонить» и&nbsp;состояние «приглашение истекло».</p></section>
+</main>
+
+<section class="next">
+  <div class="wrapc">
+    <div class="k">Следующий кейс</div>
+    <a href="case-mosvodokanal.html" class="nlink"><span>Цифровые двойники городских систем</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+  </div>
+</section>
+
+<footer id="contact">
+  <div>Москва · удалённо и&nbsp;гибрид</div>
+  <a class="mail" href="mailto:svetlana.a.gorshkova@gmail.com">svetlana.a.gorshkova@gmail.com</a>
+  <a href="https://dribbble.com/hagedis">Dribbble</a>
+</footer>
+
+<div id="lightbox"><img id="lightbox-img" src="" alt=""></div>
+<script src="home.js"></script>
+<script src="case.js"></script>
+<script src="mixt-proto.js"></script>
+</body>
+</html>
